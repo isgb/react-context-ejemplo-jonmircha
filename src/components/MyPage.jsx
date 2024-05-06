@@ -35,6 +35,9 @@ const translations = {
 export const MyPage = () => {
    const [theme,setTheme] = useState(initialTheme);
    const [language, setLanguage] = useState(initialLanguage)
+   const [texts, setTexts] = useState(language);
+
+   console.log(texts);
 
    const handleTheme = (e) => {
     console.log(e.target.value);
