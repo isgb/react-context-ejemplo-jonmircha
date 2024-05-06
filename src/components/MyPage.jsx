@@ -36,6 +36,7 @@ export const MyPage = () => {
    const [theme,setTheme] = useState(initialTheme);
    const [language, setLanguage] = useState(initialLanguage)
    const [texts, setTexts] = useState(language);
+    // https://www.youtube.com/watch?v=iQrnojbuLUE 6:16 / 17:49
 
    console.log(texts);
 
