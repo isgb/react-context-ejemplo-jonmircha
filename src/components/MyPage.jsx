@@ -6,11 +6,14 @@ const initialTheme = "light";
 
 export const MyPage = () => {
    const [theme,setTheme] = useState(initialTheme);
+
+   const handleTheme = (e) => {}
+
   return (
     <div className="my-page">
-      <Header theme={theme}/>
-      <Main theme={theme}/>
-      <Footer theme={theme}/>
+      <Header theme={theme} handleTheme={handleTheme}/>
+      <Main theme={theme} handleTheme={handleTheme}/>
+      <Footer theme={theme} handleTheme={handleTheme}/>
     </div>
   );
 };

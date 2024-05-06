@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Main = ({theme}) => {
+export const Main = ({theme,handleTheme}) => {
   return (
     <main className={theme}>
         <p>Bienvenid@ invitad@</p>
