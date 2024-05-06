@@ -1,7 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 export const MyPage = () => {
   return (
-    <div>MyPage</div>
-  )
-}
+    <div className="my-page">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
+};
