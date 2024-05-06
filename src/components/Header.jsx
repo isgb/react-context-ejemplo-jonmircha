@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Header = () => {
+export const Header = ({theme}) => {
   return (
-    <header className='dark'>
+    <header className={theme}>
     <h2>Mi aplicación SIN Context API</h2>
     <h3>Mi cabecera</h3>
     <select name="language">
