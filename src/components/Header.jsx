@@ -10,7 +10,10 @@ export const Header = () => {
         <option value="en">EN</option>
     </select>
     <input type="radio" name='theme' id="light" value='light'/>
-    <label htmlFor=""></label>
+    <label htmlFor="light">Claro</label>
+    <input type="radio" name='theme' id="dark" value='dark'/>
+    <label htmlFor="dark">Oscuro</label>
+    <button>Iniciar Sesión</button>
 </header>
   )
 }
