@@ -36,12 +36,12 @@ export const MyPage = () => {
    const [theme,setTheme] = useState(initialTheme);
    const [language, setLanguage] = useState(initialLanguage)
    const [texts, setTexts] = useState(language);
-    // https://www.youtube.com/watch?v=iQrnojbuLUE 6:16 / 17:49
+    // https://www.youtube.com/watch?v=rg6MPk6uobs 
 
    console.log(texts);
 
    const handleTheme = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     if(e.target.value === "light"){
         setTheme("light")
     }else{
@@ -49,11 +49,23 @@ export const MyPage = () => {
     }
    };
 
+   const handleLanguage = (e) => {
+    console.log(e.target.value);
+    if(e.target.value === "es"){
+      setLanguage("es");
+      setTexts(translations.es);
+    }
+    else{
+      setLanguage("en");
+      setTexts(translations.en);
+    }
+   }
+
   return (
     <div className="my-page">
-      <Header theme={theme} handleTheme={handleTheme}/>
-      <Main theme={theme} />
-      <Footer theme={theme} />
+      <Header theme={theme} handleTheme={handleTheme} texts={texts} handleLanguage={handleLanguage}/>
+      <Main theme={theme} texts={texts}/>
+      <Footer theme={theme} texts={texts}/>
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Main = ({theme,handleTheme}) => {
+export const Main = ({theme,texts,handleTheme}) => {
   return (
     <main className={theme}>
-        <p>Bienvenid@ invitad@</p>
-        <p>Hola usuari@</p>
-    <p>Mi contenido principal</p>
+        <p>{texts.mainWelcome}</p>
+        <p>{texts.mainHello}</p>
+        <p>{texts.mainContent}</p>
 </main>
   )
 }
