@@ -42,6 +42,8 @@ export const MyPage = () => {
 
   console.log(texts);
 
+  // https://www.youtube.com/watch?v=rg6MPk6uobs  7:50 / 10:38
+
   const handleTheme = (e) => {
     // console.log(e.target.value);
     if (e.target.value === "light") {
