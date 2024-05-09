@@ -41,7 +41,7 @@ export const MyPageContext = () => {
 
   console.log(texts);
 
-  // https://www.youtube.com/watch?v=rg6MPk6uobs  7:50 / 10:38
+  // https://www.youtube.com/watch?v=LV9qFupFxUQ
 
   const handleLanguage = (e) => {
     console.log(e.target.value);
