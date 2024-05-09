@@ -1,4 +1,5 @@
 import { Children, createContext } from "react";
+import ThemeContext from '../context/ThemeContext'
 
 const initialTheme = "light";
 const ThemeContext = createContext();
