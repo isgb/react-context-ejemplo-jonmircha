@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HeaderContext } from "./HeaderContext";
 import { FooterContext } from "./FooterContext";
 import { MainContext } from "./MainContext";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const initialLanguage = "es";
 const initialAuth = null;
@@ -64,20 +65,19 @@ export const MyPageContext = () => {
 
   return (
     <div className="my-page">
-      <HeaderContext
-        theme={theme}
-        handleTheme={handleTheme}
-        texts={texts}
-        handleLanguage={handleLanguage}
-        auth={auth}
-        handleAuth={handleAuth}
-      />
-      <MainContext 
-        theme={theme} 
-        texts={texts} 
-        auth={auth}
-      />
-      <FooterContext theme={theme} texts={texts} />
+      <ThemeProvider>
+          <HeaderContext
+            texts={texts}
+            handleLanguage={handleLanguage}
+            auth={auth}
+            handleAuth={handleAuth}
+          />
+          <MainContext 
+            texts={texts} 
+            auth={auth}
+          />
+          <FooterContext texts={texts} />
+      </ThemeProvider>
     </div>
   );
 };
