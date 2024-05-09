@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ThemeContext from '../context/ThemeContext'
 
-export const HeaderContext = ({theme,handleTheme,texts,handleLanguage,auth, handleAuth}) => {
+export const HeaderContext = ({texts,handleLanguage,auth, handleAuth}) => {
+  const {theme, handleTheme} = useContext(ThemeContext)
   return (
     <header className={theme}>
     <h2>{texts.headerTitle}</h2>
